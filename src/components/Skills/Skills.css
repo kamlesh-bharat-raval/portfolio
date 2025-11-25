@@ -1,0 +1,76 @@
+.skills {
+  padding: 80px 8%;
+  width: 100%;
+  text-align: center;
+}
+
+.skills h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.skills h1 span {
+  color: #00eaff;
+}
+
+.skills-container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.skill-box {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.skill-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 255, 200, 0.2);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.skill-box h2 {
+  margin-bottom: 15px;
+}
+
+
+
+.level {
+  height: 10px;
+  border-radius: 50px;
+  animation: grow 1.4s ease-out forwards;
+}
+
+.html { width: 95%; background: #ff5722; }
+.css  { width: 92%; background: #2196f3; }
+.js   { width: 85%; background: #ffd600; }
+.react{ width: 80%; background: #00eaff; }
+.git  { width: 75%; background: #fff; }
+
+@keyframes grow {
+  from { width: 0; }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}

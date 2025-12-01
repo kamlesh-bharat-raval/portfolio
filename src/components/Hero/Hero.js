@@ -1,7 +1,7 @@
 import "./Hero.css";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-scroll";
-import profileImg from "../../images/port.jpg";
+import profileImg from "../../images/kamlesh.jpg";
 
 function Hero() {
   return (

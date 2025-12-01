@@ -1,18 +1,19 @@
 import "./Projects.css";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import profileImg from "../../images/ecm.jpg";
 
 function Projects() {
   const data = [
     {
       title: "E-Commerce Website",
       desc: "Full responsive E-Commerce site with cart, filters and React Router.",
-      img: "https://i.imgur.com/fHyEMsl.png",
+      img: profileImg,
 
-      // 🔥 FINAL LIVE LINK
-      live: "https://kamlesh-bharat-raval.github.io/ecommerce-website/",
+      
+      live: "https://kamlesh-bharat-raval.github.io/kc/",
 
-      // 🔥 FINAL GITHUB LINK
-      github: "https://github.com/kamlesh-bharat-raval/ecommerce-website",
+      
+      github: "https://kamlesh-bharat-raval.github.io/kc/",
     },
   ];
 

@@ -10,36 +10,33 @@ function Contact() {
     message: "",
   });
 
-  const [status, setStatus] = useState(""); // success / error message
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+    try {
+      await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          reply_to: form.email,
+          from_email: form.email,
           message: form.message,
         },
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(() => {
-        setStatus("success");
-        setForm({ name: "", email: "", message: "" });
-      })
-      .catch(() => {
-        setStatus("error");
-      });
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.log("EmailJS Error:", error);
+      setStatus("error");
+    }
 
     setTimeout(() => setStatus(""), 3000);
   };
@@ -51,66 +48,54 @@ function Contact() {
       </h1>
 
       <div className="contact-wrapper">
-
-        {/* FORM */}
         <form className="contact-form" onSubmit={sendEmail} data-aos="fade-right">
           <input
             type="text"
             name="name"
             placeholder="Enter your name"
-            required
             value={form.name}
             onChange={handleChange}
+            required
           />
 
           <input
             type="email"
             name="email"
             placeholder="Enter your email"
-            required
             value={form.email}
             onChange={handleChange}
+            required
           />
 
           <textarea
             name="message"
             placeholder="Write your message..."
-            required
             value={form.message}
             onChange={handleChange}
-          ></textarea>
+            required
+          ></textarea> 
 
           <button type="submit">Send Message</button>
 
-          {/* SUCCESS / ERROR MESSAGE */}
           {status === "success" && (
             <p className="success">✔ Message Sent Successfully!</p>
           )}
+
           {status === "error" && (
-            <p className="error">✖ Failed to send message. Try Again!</p>
+            <p className="error">❌ Failed to send message. Check EmailJS setup.</p>
           )}
         </form>
 
-        {/* SOCIAL BOX */}
         <div className="contact-info" data-aos="fade-left">
           <h2>Connect With Me</h2>
           <p>You can also reach out through social platforms.</p>
 
           <div className="social-icons">
-            <a href="#" target="_blank">
-              <FaLinkedin />
-            </a>
-
-            <a href="#" target="_blank">
-              <FaGithub />
-            </a>
-
-            <a href="mailto:yourmail@gmail.com">
-              <FaEnvelope />
-            </a>
+            <a href="#" target="_blank"><FaLinkedin /></a>
+            <a href="#" target="_blank"><FaGithub /></a>
+            <a href="mailto:yourmail@gmail.com"><FaEnvelope /></a>
           </div>
         </div>
-
       </div>
     </section>
   );

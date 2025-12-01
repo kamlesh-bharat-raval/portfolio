@@ -1,115 +1,117 @@
 .contact {
-  padding: 80px 8%;
-  width: 100%;
+    padding: 80px 8%;
+    width: 100%;
 }
 
 .contact h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .contact h1 span {
-  color: #00eaff;
+    color: #00eaff;
 }
 
 .contact-wrapper {
-  margin-top: 60px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 50px;
-  flex-wrap: wrap;
+    margin-top: 60px;
+    display: flex;
+    /* FIX 2: Connect With Me box ko center mein laane ke liye */
+    align-items: center; 
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .contact-form {
-  flex: 1;
-  min-width: 350px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  color: white;
-  font-size: 16px;
-  outline: none;
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    outline: none;
 }
 
 .contact-form textarea {
-  height: 150px;
-  resize: none;
+    /* FIX 1: Textarea ki height kam karke input field jitni ki */
+    height: 50px; 
+    resize: none;
 }
 
 .contact-form button {
-  padding: 15px;
-  background: #00eaff;
-  border: none;
-  color: black;
-  font-weight: 700;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 15px;
+    background: #00eaff;
+    border: none;
+    color: black;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .contact-form button:hover {
-  background: #00c2d4;
+    background: #00c2d4;
 }
 
 /* SUCCESS & ERROR */
 .success {
-  color: #00ff7f;
-  margin-top: -10px;
-  font-weight: 600;
+    color: #00ff7f;
+    margin-top: -10px;
+    font-weight: 600;
 }
 
 .error {
-  color: #ff4e4e;
-  margin-top: -10px;
-  font-weight: 600;
+    color: #ff4e4e;
+    margin-top: -10px;
+    font-weight: 600;
 }
 
 /* SOCIAL BOX */
 .contact-info {
-  flex: 1;
-  min-width: 300px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
 }
 
 .contact-info h2 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .social-icons {
-  margin-top: 20px;
-  display: flex;
-  gap: 25px;
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
 }
 
 .social-icons a {
-  font-size: 28px;
-  color: #00eaff;
-  transition: 0.3s;
+    font-size: 28px;
+    color: #00eaff;
+    transition: 0.3s;
 }
 
 .social-icons a:hover {
-  transform: translateY(-5px);
-  color: white;
+    transform: translateY(-5px);
+    color: white;
 }
 
 /* Responsive */
 @media (max-width: 850px) {
-  .contact-wrapper {
-    flex-direction: column;
-  }
+    .contact-wrapper {
+        flex-direction: column;
+    }
 }

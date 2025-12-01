@@ -1,5 +1,5 @@
 import "./About.css";
-import profileImg from "../../images/port.jpg";
+import profileImg from "../../images/kamlesh.jpg";
 import { FaDownload } from "react-icons/fa";
 
 function About() {

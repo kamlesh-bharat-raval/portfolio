@@ -1,6 +1,6 @@
 @import "./styles/variables.css";
 
-/* ===== RESET ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* ===== THEME COLORS ===== */
+
 body.light {
   background: #ffffff;
   color: #111;
@@ -20,7 +20,7 @@ body.dark {
   color: #f5f5f5;
 }
 
-/* UNIVERSAL TEXT IMPROVE */
+
 h1, h2, h3, h4 {
   color: inherit;
 }
@@ -30,14 +30,14 @@ p {
   line-height: 1.6;
 }
 
-/* ===== CONTAINER ===== */
+
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* ===== GRID RESPONSIVE ===== */
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -50,7 +50,7 @@ p {
   gap: 2rem;
 }
 
-/* ===== MEDIA QUERIES ===== */
+
 
 @media (max-width: 992px) {
   .grid-3 {
@@ -84,7 +84,7 @@ p {
   }
 }
 
-/* ===== THEME TOGGLE BUTTON ===== */
+
  .theme-toggle {
   position: fixed;
   bottom: 25px;

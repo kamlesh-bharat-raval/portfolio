@@ -85,10 +85,10 @@ p {
 }
 
 /* ===== THEME TOGGLE BUTTON ===== */
-.theme-toggle {
+ .theme-toggle {
   position: fixed;
   bottom: 25px;
-  right: 25px;
+  /* right: 25px; */
   padding: 12px 20px;
   background: #04d9ff;
   color: #000;
@@ -103,4 +103,4 @@ p {
 
 .theme-toggle:hover {
   transform: scale(1.05);
-}
+} 

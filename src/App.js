@@ -13,9 +13,7 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "dark"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   // AOS INIT
   useEffect(() => {
@@ -27,7 +25,7 @@ function App() {
     });
   }, []);
 
-  // Apply theme to BODY
+  // THEME LOGIC
   useEffect(() => {
     if (theme === "light") {
       document.body.classList.add("light");
@@ -40,10 +38,37 @@ function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+
+  // RESPONSIVE THEME BUTTON POSITION FIX
+  useEffect(() => {
+    const positionFix = () => {
+      const btn = document.querySelector(".theme-toggle-wrapper");
+      if (!btn) return;
+
+      if (window.innerWidth <= 768) {
+        btn.style.bottom = "25px";
+        btn.style.top = "auto";
+        btn.style.left = "20px";
+        btn.style.right = "auto";
+      } else {
+        btn.style.top = "100px";
+        btn.style.left = "30px";
+        btn.style.bottom = "auto";
+        btn.style.right = "auto";
+      }
+    };
+
+    positionFix();
+    window.addEventListener("resize", positionFix);
+
+    return () => window.removeEventListener("resize", positionFix);
+  }, []);
+
+
   return (
     <>
-   {/* THEME TOGGLE BUTTON FIXED RIGHT SIDE */}
-<div className="theme-toggle-wrapper">
+      {/* FIXED THEME BUTTON LEFT SIDE */}
+   <div className="theme-toggle-wrapper">
   <button
     onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     className="theme-toggle"

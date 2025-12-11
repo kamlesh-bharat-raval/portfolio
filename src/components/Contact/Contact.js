@@ -91,8 +91,9 @@ function Contact() {
           <p>You can also reach out through social platforms.</p>
 
           <div className="social-icons">
-            <a href="#" target="_blank"><FaLinkedin /></a>
-            <a href="#" target="_blank"><FaGithub /></a>
+            
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a> 
+            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
             <a href="mailto:yourmail@gmail.com"><FaEnvelope /></a>
           </div>
         </div>

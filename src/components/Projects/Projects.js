@@ -9,12 +9,13 @@ function Projects() {
       desc: "Full responsive E-Commerce site with cart, filters and React Router.",
       img: profileImg,
 
-      
+    
       live: "https://kamlesh-bharat-raval.github.io/kc/",
 
       
       github: "https://kamlesh-bharat-raval.github.io/kc/",
     },
+    
   ];
 
   return (
@@ -33,10 +34,12 @@ function Projects() {
               <p>{project.desc}</p>
 
               <div className="project-buttons">
-                <a href={project.live} target="_blank" className="btn">
+              
+                <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn">
                   Live <FaExternalLinkAlt />
                 </a>
-                <a href={project.github} target="_blank" className="btn github">
+                
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn github">
                   GitHub <FaGithub />
                 </a>
               </div>

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.22bec43e.css",
+    "main.js": "/portfolio/static/js/main.43ea150f.js",
+    "static/media/kamlesh.jpg": "/portfolio/static/media/kamlesh.1233e03cb7791e7b7157.jpg",
+    "static/media/ecm.jpg": "/portfolio/static/media/ecm.d42580b45ee9d63c82dc.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.22bec43e.css.map": "/portfolio/static/css/main.22bec43e.css.map",
+    "main.43ea150f.js.map": "/portfolio/static/js/main.43ea150f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22bec43e.css",
+    "static/js/main.43ea150f.js"
+  ]
+}

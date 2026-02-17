@@ -1,21 +1,25 @@
 import "./Projects.css";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import profileImg from "../../images/ecm.jpg";
+
+import ecommerceImg from "../../images/ecm.jpg";
+import travelImg from "../../images/travel.jpg";   // new image
 
 function Projects() {
   const data = [
     {
       title: "E-Commerce Website",
       desc: "Full responsive E-Commerce site with cart, filters and React Router.",
-      img: profileImg,
-
-    
+      img: ecommerceImg,
       live: "https://kamlesh-bharat-raval.github.io/kc/",
-
-      
-      github: "https://kamlesh-bharat-raval.github.io/kc/",
+      github: "https://github.com/kamlesh-bharat-raval/kc",
     },
-    
+    {
+      title: "My Travel Planner",
+      desc: "Travel planning app to manage trips, dates, destinations and budgets with React.",
+       img: travelImg,
+      live: "https://kamlesh-bharat-raval.github.io/my-travel-planner/",
+      github: "https://github.com/kamlesh-bharat-raval/my-travel-planner",
+    },
   ];
 
   return (
@@ -34,12 +38,21 @@ function Projects() {
               <p>{project.desc}</p>
 
               <div className="project-buttons">
-              
-                <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
                   Live <FaExternalLinkAlt />
                 </a>
-                
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn github">
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn github"
+                >
                   GitHub <FaGithub />
                 </a>
               </div>

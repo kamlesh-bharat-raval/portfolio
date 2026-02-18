@@ -2,7 +2,7 @@ import "./Projects.css";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 import ecommerceImg from "../../images/ecm.jpg";
-import travelImg from "../../images/travel.jpg";   // new image
+import travelImg from "../../images/travel.jpg";  
 
 function Projects() {
   const data = [

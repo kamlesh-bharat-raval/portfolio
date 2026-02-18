@@ -11,12 +11,12 @@ function About() {
 
       <div className="about-box" data-aos="fade-up" data-aos-delay="200">
 
-        {/* LEFT IMAGE */}
+      
         <div className="about-left">
           <img src={profileImg} alt="profile" />
         </div>
 
-        {/* RIGHT CONTENT */}
+        
         <div className="about-right">
           <h2>Frontend Developer</h2>
 
@@ -33,7 +33,7 @@ function About() {
             projects to level up even more.
           </p>
 
-          {/* PREMIUM DOWNLOAD CV BUTTON */}
+          
           <a href="/KAMLESH.CV.pdf" download className="about-btn">
             Download CV <FaDownload />
           </a>

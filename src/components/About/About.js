@@ -34,7 +34,7 @@ function About() {
           </p>
 
           {/* PREMIUM DOWNLOAD CV BUTTON */}
-          <a href="/KAMLESH.CV.pdf" download className="about-btn">
+          <a href="/KB.pdf" download className="about-btn">
             Download CV <FaDownload />
           </a>
         </div>
